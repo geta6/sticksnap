@@ -1,0 +1,99 @@
+@import 'nib'
+@import url('http://fonts.googleapis.com/css?family=Asap:400,700,700italic,400italic');
+
+html
+  font 11px Asap,Sans-Serif
+  line-height 1.5
+  color #3B4854
+
+a
+  color #4CC2E4
+  &:hover
+    color #4CD6FC
+
+h1
+  font-weight bold
+  font-size 2em
+
+.article
+  position relative
+  min-height 240px
+  .title
+    display block
+    position absolute
+    width 200px
+    .inner-title
+      padding 0 10px
+  .content
+    margin-left 200px
+    padding-left 20px
+    border-left 1px solid #3B4854
+
+#header
+  .exterior
+    z-index 100
+    position fixed
+    top 0
+    left 0
+    right 0
+    height 50px
+    background rgba(255,255,255,.84)
+    box-shadow 0 0 1px 0 rgba(0,0,0,.24)
+  .interior
+    li
+      opacity .84
+      display inline-block
+      width 100px
+      height 50px
+      line-height 50px
+      text-align center
+      transition .24s
+      background-position 50% 50%
+      background-repeat no-repeat
+      img
+        transition .24s
+      &:hover
+        color white
+        background-color #4CC2E4
+        &.prev
+          background-image url('/img/prev-alt.png')
+        &.next
+          background-image url('/img/next-alt.png')
+        img
+          opacity 0
+      &:focus
+        background-color #4CD6FC
+    .search
+      input
+        position absolute
+        left 200px
+        top 0
+        bottom 0
+        right 0
+        margin 0
+        padding 0 20px
+        height 50px
+        border 0
+        outline 0
+        transition .24s
+        background-color transparent
+        &:hover
+          color white
+          background-color #4CC2E4
+        &:focus
+          color white
+          background-color #4CD6FC
+
+#leader
+  .exterior
+    margin-top 51px
+
+#footer
+  .interior
+    text-align center
+
+::-webkit-input-placeholder
+   color #EEE
+
+:-moz-placeholder
+   color #EEE

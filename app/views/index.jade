@@ -1,0 +1,25 @@
+extends layout
+
+block header
+  ul
+    li.prev: img.prev-post(src='/img/prev.png')
+    li.next: img.next-post(src='/img/next.png')
+  .search
+    input(type='text', placeholder='Search')
+
+block leader
+
+  - var f = 0
+  for i in 'test'
+    - f++
+    .article
+      .title
+        .inner-title
+          h1 title#{f}
+          time August 2012
+      .content content
+
+block footer
+  :markdown
+    * [Document](https://github.com/geta6/express-city#readme)
+    &copy; express-city
